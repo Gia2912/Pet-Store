@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7882f">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/PS_paw_logo_48f63a06-e9cf-4e19-a8f5-91c93a764bf5_32x32.png" type="image/png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">  
+  <title>Giỏ hàng</title>
+  <link href="./css/giohang.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./css/doan.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <script src="./js/main.js"></script>
+  <header>
+  <!------------------- Header logo -------------------------------------->
+  <div class="logo">
+    <a href="./doan.html" title="Pet Store" rel="home">
+      <img src="./img/Redesign-LogoPetStore-02-1.png" alt="Pet Store" />
+  </div>
+
+   <!------------------- MENU NAV-------------------------------------->
+   <div class="menu">
+    <li><a href="./doan.html">HOME</a></li>
+    <li><a href="">THÚ CƯNG <i class="fa fa-caret-down"></i></a>
+      <ul class="petmenu">
+        <li><a href="./webdog.html">Chó Cảnh</a>
+       
+        </li>
+        <li><a href="./webcat.html">Mèo Cảnh </a>
+        </li>
+        <li><a href="THÚ CƯNG KHÁC">Thú cưng khác</a>
+          
+        </li>
+      </ul>
+    </li>
+    <li><a href="">PHỤ KIỆN <i class="fa fa-caret-down"></i></a>
+      <ul class="phukien-menu">
+        <li><a href="">Balo & túi sách</a></li>
+        <li><a href="">Chuồng & nệm</a></li>
+        <li><a href="">Dụng cụ vệ sinh</a></li>
+        <li><a href="">Đồ chơi & phụ kiện huấn luyện</a></li>
+        <li><a href="">Thức ăn</a></li>
+        <li><a href="">Vật dụng ăn uống</a></li>
+        <li><a href="">Vòng cổ & dây dẫn</a></li>
+      </ul>
+    </li>
+    <li><a href="">DỊCH VỤ <i class="fa fa-caret-down"></i></a>
+      <ul class="dichvumenu">
+        <li><a href="">Trông giữ</a></li>
+        <li><a href="">Dịch vụ làm đẹp</a></li>
+        <li><a href="">Dịch vụ hỏa táng thú cưng</a></li>
+      </ul>
+    </li>
+    <li><a href="">THÔNG TIN</a></li>
+  </div>
+    <div class="orthers">
+      <li><input placeholder="Bạn muốn tìm gì..." type="search"></li>
+      <li><button id="userButton"><a href="./dnhap.html" title="Đăng nhập"><i class="fas fa-user"></i></a></button></li>
+      <li><a class="shopping" href="./giohang.html" title="Giỏ hàng"><i class="far fa-cart-plus"></i></a></li>
+    </div>
+  </header>
+<!---------------------------------------ICON-BAR-------------------------------------------------->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/" class="facebook" title="Follow on Facebook"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.youtube.com/channel/UCZsffo0QcIMCHKI6MMS-dQw/featured" class="youtube"
+    title="Follow on Facebook"><i class="fab fa-youtube"></i></i></a>
+  <a href="tel:0123456789" class="iconphone" title="Call us"><i class="fas fa-phone"></i></a>
+  <a href="https://www.instagram.com/" class="ig" title="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+  <!---------------------------------------GIO HANG-------------------------------->
+
+<div class="payform">
+  <div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form action="/action_page.php">
+          <div class="row">
+            <div class="col-50">
+              <h3>Thông tin chi tiết</h3>
+              <label for="name">
+                <i class="fa fa-user"></i> Họ Tên</label>
+              <input type="text" id="name" placeholder="Nguyễn Văn A">
+              <label for="email">
+                <i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" placeholder="ltng@gmail.com">
+              <label for="adr">
+                <i class="fas fa-map-marker-check"></i> Địa Chỉ</label>
+              <input type="text" id="adr" placeholder="KP6, Linh Trung, Thủ Đức, TP HCM">
+              <label for="Phone">
+                <i class="fas fa-phone-alt"></i> Số Điện Thoại</label>
+              <input type="text" id="Phone" placeholder="0123456789">
+            </div>
+
+            <div class="col-50">
+              <h3>Thanh toán</h3>
+              <label for="name">Hình thức thanh toán</label>
+              <label class="checkpay">
+                <input type="radio" checked="checked" name="radio"> Thanh toán tiền mặt
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkpay">
+                <input type="radio" name="radio"> Thanh toán bằng thẻ
+                <span class="checkmark"></span>
+              </label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-25">
+            <div class="container">
+              <h3>Giỏ hàng <span class="price" style="color:rgb(250, 250, 250)"><i
+                    class="fa fa-shopping-cart"></i></span></h4>
+                <hr>
+                <div class="modal-body">
+                  <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                    <span class="cart-price cart-header cart-column">Giá</span>
+                    <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                  </div>
+                  <div class="cart-items">
+                    <div class="cart-row">
+                      <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="./img/cat1.png" width="100" height="100">
+                        <span class="cart-item-title">SCOTTISH FOLD</span>
+                      </div>
+                      <span class="cart-price cart-column">12.000.000đ</span>
+                      <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <button class="btn btn-danger" type="button">Xóa</button>
+                      </div>
+                    </div>
+                    <div class="cart-row">
+                      <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="./img/cat3.jpg" width="100" height="100">
+                        <span class="cart-item-title">MÈO XIÊM</span>
+                      </div>
+                      <span class="cart-price cart-column">1.800.000đ</span>
+                      <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="2">
+                        <button class="btn btn-danger" type="button">Xóa</button>
+                      </div>
+                    </div>
+                    <div class="cart-total">
+                      <strong class="cart-total-title">Tổng Cộng:</strong>
+                      <span class="cart-total-price">13.800.000 VNĐ</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <input type="submit" value="Xác nhận đặt hàng" class="btn">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer>
+    <div class="footerphoto">
+      <img src="./img/footerphoto.png">
+    </div>
+    <section id="sectionfooter">
+      <div class="footertitle">
+        <div>
+          <h4>VỀ CHÚNG TÔI</h4>
+          <ul>
+            <li><a href="">GIỚI THIỆU</a></li>
+            <li><a href="">HỢP TÁC NHÂN GIỐNG</a></li>
+            <li><a href="">CỬA HÀNG PHỤ KIỆN</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+          <ul>
+            <li><a href="">HƯỚNG DẪN MUA HÀNG</a></li>
+            <li><a href="">CHÍNH SÁCH BẢO HÀNH</a></li>
+            <li><a href="">ĐIỀU KHOẢN VÀ DỊCH VỤ</a></li>
+            <li><a href="">MUA TRẢ GÓP 0%</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>THÔNG TIN LIÊN HỆ</h4>
+          <ul>
+            <li><a href=""><i class="fas fa-map-marker-alt"></i> KP6, LINH TRUNG, THỦ ĐỨC, TP HCM</a></li>
+            <li><a href=""><i class="far fa-phone-alt"></i> Tư vấn mua: <span style="color: #e26e02;"><a
+                    style="color: #e26e02;" href="tel:0123456789">0123 456 789</a></span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4><b></b><span style="font-size:90%;color:rgb(255, 130, 14);">ĐƯỜNG ĐẾN PET STORE</span><b></b></h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.343433065643!2d106.80230080187484!3d10.870012150562223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiDEkEhRRyBUUC5IQ00!5e0!3m2!1svi!2s!4v1634649457242!5m2!1svi!2s"
+            width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  
+  </footer>
+
+</body>
+
+</html>

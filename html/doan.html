@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7882f">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/PS_paw_logo_48f63a06-e9cf-4e19-a8f5-91c93a764bf5_32x32.png" type="image/png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">  
+  <title>Pets store</title>
+  <link href="./css/doan.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!------------------- Header logo -------------------------------------->
+    <div class="logo">
+      <a href="./doan.html" title="Pet Store" rel="home">
+        <img src="./img/Redesign-LogoPetStore-02-1.png" alt="Pet Store" />
+    </div>
+
+    <!------------------- MENU NAV-------------------------------------->
+    <div class="menu">
+      <li><a href="./doan.html">HOME</a></li>
+      <li><a href="">THÚ CƯNG <i class="fa fa-caret-down"></i></a>
+        <ul class="petmenu">
+          <li><a href="./webdog.html">Chó Cảnh</a>
+         
+          </li>
+          <li><a href="./webcat.html">Mèo Cảnh </a>
+          </li>
+          <li><a href="THÚ CƯNG KHÁC">Thú cưng khác</a>
+            
+          </li>
+        </ul>
+      </li>
+      <li><a href="">PHỤ KIỆN <i class="fa fa-caret-down"></i></a>
+        <ul class="phukien-menu">
+          <li><a href="">Balo & túi sách</a></li>
+          <li><a href="">Chuồng & nệm</a></li>
+          <li><a href="">Dụng cụ vệ sinh</a></li>
+          <li><a href="">Đồ chơi & phụ kiện huấn luyện</a></li>
+          <li><a href="">Thức ăn</a></li>
+          <li><a href="">Vật dụng ăn uống</a></li>
+          <li><a href="">Vòng cổ & dây dẫn</a></li>
+        </ul>
+      </li>
+      <li><a href="">DỊCH VỤ <i class="fa fa-caret-down"></i></a>
+        <ul class="dichvumenu">
+          <li><a href="">Trông giữ</a></li>
+          <li><a href="">Dịch vụ làm đẹp</a></li>
+          <li><a href="">Dịch vụ hỏa táng thú cưng</a></li>
+        </ul>
+      </li>
+      <li><a href="">THÔNG TIN</a></li>
+    </div>
+    <div class="orthers">
+      <li><input placeholder="Bạn muốn tìm gì..." type="search"></li>
+      <li><button id="userButton"><a href="./dnhap.html" title="Đăng nhập"><i class="fas fa-user"></i></a></button></li>
+      <li><a class="shopping" href="./giohang.html" title="Giỏ hàng"><i class="far fa-cart-plus"></i></a></li>
+    </div>
+  </header>
+  <!---------------------------------------ICON-BAR-------------------------------------------------->
+  <div class="icon-bar">
+    <a href="https://www.facebook.com/" class="facebook" title="Follow on Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.youtube.com/channel/UCZsffo0QcIMCHKI6MMS-dQw/featured" class="youtube"
+      title="Follow on Facebook"><i class="fab fa-youtube"></i></i></a>
+    <a href="tel:0123456789" class="iconphone" title="Call us"><i class="fas fa-phone"></i></a>
+    <a href="https://www.instagram.com/" class="ig" title="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+  <!-- ảnh trung tâm -->
+  <section id="centerphoto">
+    <div class="photo">
+      <img src="./img/wallpaper/wallpaper_pug.jfif">
+      <img src="./img/wallpaper/wallpaper1.jfif">
+      <img src="./img/wallpaper/wallpaper2.jfif">
+      <img src="./img/wallpaper/wallpaper3.jfif">
+      <img src="./img/wallpaper/photo-1598134493179-51332e56807f.jfif">
+    </div>
+
+    <div>
+      <div class="dot-container">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("scroll", function () { })
+    const imgPosition = document.querySelectorAll(".photo img")
+    const imgContainer = document.querySelector(".photo")
+    const dotItem = document.querySelectorAll(".dot")
+    let imgNumber = imgPosition.length
+    let index = 0
+    //console.log(imgPosition)
+    imgPosition.forEach(function (image, index) {
+      image.style.left = index * 100 + "%"
+      dotItem[index].addEventListener("click", function () {
+        photo(index)
+      })
+    })
+
+    function imgSlide() {
+      index++;
+      console.log(index)
+      if (index >= imgNumber) { index = 0 }
+      photo(index)
+    }
+    function photo(index) {
+      imgContainer.style.left = "-" + index * 100 + "%"
+      const dotActive = document.querySelector('.active')
+      dotActive.classList.remove("active")
+      dotItem[index].classList.add("active")
+    }
+    setInterval(imgSlide, 5000)
+  </script>
+
+  <!------------------------------------- -trang trại chó cảnh-------------------------------- -->
+  <div class="section-title-center-dog">
+    <h3 class="title-center-dog">
+      <a href="./webdog.html" style="font-size: 130%; color: azure;">TRANG TRẠI CHÓ CẢNH <i
+          class="fas fa-caret-right"></i></span>
+    </h3>
+  </div>
+  <section class="section" id="dog-title-picture">
+    <div class="row row-full-width">
+      <div class="col medium-6">
+        <div id="imagecorgi">
+          <a class=""  target="_blank" rel="noopener noreferrer">
+            <img width="1920" height="721" src="./img/wallpaper/corgi.jpg" title="Chó Corgi" class="attachment-original size-original"
+              alt="corgi" loading="lazy"
+              srcset="img\wallpaper\corgi.jpg 1920w, img\wallpaper\corgi-300x113.png 300w, img\wallpaper\corgi-1024x385.png 1024w, img\wallpaper\corgi-768x288.png 768w, img\wallpaper\corgi-1536-577.png 1536w, img\wallpaper\corgi-510x192192.png 510w"
+              sizes="(max-width: 1920px) 100vw, 1920px">
+          </a>
+        </div>
+      </div>
+      <div class="col medium-6">
+        <div id="imagephocsoc">
+          <a class="" >
+            <img width="1920" height="721" src="./img/wallpaper/phocsoc.jpg" title="Chó phốc sóc" class="attachment-original size-original"
+              alt="phocsoc" loading="lazy"
+              srcset="img\wallpaper\phocsoc.jpg 1920w, img\wallpaper\phocsoc-300x113.png 300w, img\wallpaper\phocsoc-1024x385.png 1024w, img\wallpaper\phocsoc-768x288.png 768w, img\wallpaper\phocsoc-1536x577.png 1536w, img\wallpaper\phocsoc-510x192.png 510w"
+              sizes="(max-width: 1920px) 100vw, 1920px">
+          </a>
+        </div>
+      </div>
+      <div id="col" class="col medium-4">
+        <div id="imagepoodle">
+          <a class=""  target="_blank" rel="noopener noreferrer">
+            <img width="1920" height="721" src="./img/wallpaper/poodle.jpg" title="Chó Poodle" class="attachment-original size-original"
+              alt="poodle" loading="lazy"
+              srcset="img\wallpaper\poodle.jpg 1920w, img\wallpaper\poodle-300x113.jpg 300w, img\wallpaper\poodle-1024x385.jpg 1024w, img\wallpaper\poodle-768x288.jpg 768w, img\wallpaper\poodle-1536-577.jpg 1536w, img\wallpaper\poodle-510x192.jpg 510w"
+              sizes="(max-width: 1920px) 100vw, 1920px">
+          </a>
+        </div>
+      </div>
+      <div id="col" class="col medium-4">
+        <div id="imagebull">
+          <a class="" >
+            <img width="1920" height="721" src="./img/wallpaper/bull.png" title="Chó Bull" class="attachment-original size-original"
+              alt="bull" loading="lazy"
+              srcset="img\wallpaper\bull.png 1920w, img\wallpaper\bull-300x113.png 300w, img\wallpaper\bull-1024x385.png 1024w, img\wallpaper\bull-768x288.png 768w, img\wallpaper\bull-1536x577.png 1536w, img\wallpaper\bull-510x192.png 510w"
+              sizes="(max-width: 1920px) 100vw, 1920px">
+          </a>
+        </div>
+      </div>
+      <div id="col" class="col medium-4 small-6 large-4">
+        <div id="imagechowchow">
+          <a class="" >
+            <img width="1920" height="721" src="./img/wallpaper/chowchow.jpg" title="Chó Chow Chow" class="attachment-original size-original"
+              alt="chowchow" loading="lazy"
+              srcset="img\wallpaper\chowchow.jpg 1920w, img\wallpaper\chowchow-300x113.jpg 300w, img\wallpaper\chowchow-1024x385.jpg 1024w, img\wallpaper\chowchow-768x288.jpg 768w, img\wallpaper\chowchow-1536x577.jpg 1536w, img\wallpaper\chowchow-510x192.jpg 510w"
+              sizes="(max-width: 1920px) 100vw, 1920px">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dog">
+
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./giohang.html">
+          <img src="./img/dog/alaska.png" title="Chó Alaska" alt="alaska">
+        </a>
+        <div class="desc">ALASKA</div>
+      </div>
+    </div>
+
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./Golden.html">
+          <img src="./img/dog/golden.png" title="Chó Golden" alt="Golden">
+        </a>
+        <div class="desc">GOLDEN</div>
+      </div>
+    </div>
+
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./giohang.html">
+          <img src="./img/dog/husky.png" title="Chó Husky" alt="Husky">
+        </a>
+        <div class="desc">HUSKY</div>
+      </div>
+    </div>
+
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./giohang.html">
+          <img src="./img/dog/shiba.png" title="Chó Shiba" alt="shiba">
+        </a>
+        <div class="desc">SHIBA</div>
+      </div>
+    </div>
+
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./giohang.html">
+          <img src="./img/dog/pug.png" title="Chó Pug" alt="pug">
+        </a>
+        <div class="desc">PUG</div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+  </section>
+
+  <!-- trang trại mèo cảnh -->
+  <div class="section-title-center-cat">
+    <h3 class="title-center-cat">
+      <a href="./webcat.html" style="font-size: 130%; color: azure;">TRANG TRẠI MÈO CẢNH <i
+          class="fas fa-caret-right"></i></a>
+    </h3>
+  </div>
+
+  <section id="catcenterphoto">
+    <div class="photocat">
+      <img src="./img/wallpaper/home-picture-cat-1.jpg">
+      <img src="./img/wallpaper/home-picture-cat-2.jpg">
+      <img src="./img/wallpaper/home-picture-cat-3.jpg">
+      <img src="./img/wallpaper/home-picture-cat-4.jpg">
+    </div>
+    <div>
+      <div class="dot-containercat">
+        <div class="dotcat activecat"></div>
+        <div class="dotcat"></div>
+        <div class="dotcat"></div>
+        <div class="dotcat"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const imgPositioncat = document.querySelectorAll(".photocat img")
+    const imgContainercat = document.querySelector(".photocat")
+    const dotItemcat = document.querySelectorAll(".dotcat")
+    let imgNumbercat = imgPositioncat.length
+    let indexcat = 0
+
+    imgPositioncat.forEach(function (image, indexcat) {
+      image.style.left = indexcat * 100 + "%"
+      dotItemcat[indexcat].addEventListener("click", function () {
+        photocat(indexcat)
+      })
+    })
+
+    function imgSlidecat() {
+      indexcat++;
+      console.log(indexcat)
+      if (indexcat >= imgNumbercat) { indexcat = 0 }
+      photocat(indexcat)
+    }
+    function photocat(indexcat) {
+      imgContainercat.style.left = "-" + indexcat * 100 + "%"
+      const dotActivecat = document.querySelector('.activecat')
+      dotActivecat.classList.remove("activecat")
+      dotItemcat[indexcat].classList.add("activecat")
+    }
+    setInterval(imgSlidecat, 4000)
+  </script>
+
+  <section id="cat">
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./Meolongngan.html">
+          <img src="./img/cat/meo-anh-long-ngan.png" title="Mèo Anh lông ngắn" alt="meoanhlongngan">
+        </a>
+        <div class="desc">MÈO ANH</div>
+      </div>
+    </div>
+
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./giohang.html">
+          <img src="./img/cat/maincoon.png" title="Mèo Maine Coon" alt="maincoon">
+        </a>
+        <div class="desc">MAINCOON</div>
+      </div>
+    </div>
+
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./Meoxiem.html">
+          <img src="./img/cat/meo-xiem.png" alt="meoxiem">
+        </a>
+        <div class="desc">MÈO XIÊM</div>
+      </div>
+    </div>
+
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./giohang.html">
+          <img src="./img/cat/Scottish-gold.png" title="Mèo Xiêm" alt="Scottishgold">
+        </a>
+        <div class="desc">SCOTTISH GOLD</div>
+      </div>
+    </div>
+
+    <div class="section-dog-cat">
+      <div class="picture">
+        <a target="_blank" href="./giohang.html">
+          <img src="./img/cat/meo-ba-tu.png" title="Mèo Ba Tư" alt="meobatu">
+        </a>
+        <div class="desc">MÈO BA TƯ</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footerphoto">
+      <img src="./img/footerphoto.png">
+    </div>
+    <section id="sectionfooter">
+      <div class="footertitle">
+        <div>
+          <h4>VỀ CHÚNG TÔI</h4>
+          <ul>
+            <li><a href="">GIỚI THIỆU</a></li>
+            <li><a href="">HỢP TÁC NHÂN GIỐNG</a></li>
+            <li><a href="">CỬA HÀNG PHỤ KIỆN</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+          <ul>
+            <li><a href="">HƯỚNG DẪN MUA HÀNG</a></li>
+            <li><a href="">CHÍNH SÁCH BẢO HÀNH</a></li>
+            <li><a href="">ĐIỀU KHOẢN VÀ DỊCH VỤ</a></li>
+            <li><a href="">MUA TRẢ GÓP 0%</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>THÔNG TIN LIÊN HỆ</h4>
+          <ul>
+            <li><a href=""><i class="fas fa-map-marker-alt"></i> KP6, LINH TRUNG, THỦ ĐỨC, TP HCM</a></li>
+            <li><a href=""><i class="far fa-phone-alt"></i> Tư vấn mua: <span style="color: #e26e02;"><a
+                    style="color: #e26e02;" href="tel:0123456789">0123 456 789</a></span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4><b></b><span style="font-size:90%;color:rgb(255, 130, 14);">ĐƯỜNG ĐẾN PET STORE</span><b></b></h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.343433065643!2d106.80230080187484!3d10.870012150562223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiDEkEhRRyBUUC5IQ00!5e0!3m2!1svi!2s!4v1634649457242!5m2!1svi!2s"
+            width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </footer>
+</body>
+</html>

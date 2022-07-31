@@ -1,0 +1,163 @@
+:root {
+    --maincolor: #0462a0;
+    --subcolor: #0c6994;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Solway', serif;
+    color: #000;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+header{
+    height: 100px;
+    width: 100vw;
+    border-bottom: 2px solid #dddd;
+    text-align: center;
+    padding: 6px 12px;
+}
+.row {
+    display: flex;
+}
+.space-between {
+    justify-content: space-between;
+    color: rgb(255, 202, 104);
+}
+/* --------------------------SECTION ADMIN CONTENT--------------------------- */
+.admin-content{
+    padding-top: 10px;
+}
+.admin-content-left{
+    width: 20%;
+    padding: 30px 0 0 12px;
+    background-color: var(--subcolor);
+}
+.admin-content-left>ul>li>a{
+    font-weight: bold;
+    font-size: 18px;
+}
+.admin-content-left ul li ul li {
+    padding-left: 20px;
+    height: 30px;
+}
+.admin-content-left ul li ul {
+    display: none;
+    padding-left: 30px;
+}
+.admin-content-left ul li.active ul {
+    display: block;
+}
+.admin-content-left > ul > li {
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.admin-content-left > ul > li i {
+    margin-right: 12px;
+    line-height: 22px;
+  }
+.admin-content-right-bg {
+    width: 100%;
+    height: 100%;
+}
+.admin-content-right-bg img {
+    width: 100%;
+    height: 100%;
+}
+.admin-content-right {
+      width: 80%;
+      background-color: rgba(221, 221, 221, 0.867);
+      padding: 12px 12px;
+      height: 100vh;
+      overflow-y: scroll;
+  }
+  .admin-content-right>img{
+      padding: 0 0;
+  }
+/*------------------------------CARTEGORY RIGHT---------------------------*/
+.admin-content-right-cartegory_add input{
+    height: 30px;
+    width: 200px;
+    padding-left: 12px;
+    margin-top: 20px;
+}
+.admin-content-right-cartegory_add button{
+    display: block;
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    background: brown;
+    border: none;
+    color: cornsilk;
+    transition: all 0.3s ease;
+}
+.admin-content-right-cartegory_add button:hover{
+    background-color: transparent;
+    border: 1px solid brown;
+    color: brown;
+}
+
+.header-top-left p {
+    font-family: "Otomanopee One", sans-serif;
+    color: var(--maincolor);
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 5px
+}
+.header-top-left {
+    margin-bottom: 30px;
+}
+/*------------------------------CARTEGORY LIST---------------------*/
+.admin-content-right-cartegory_list table{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.admin-content-right-cartegory_list table tr th,td{
+    border: 1px solid #dddd;
+}
+table{
+    border-collapse: collapse ;
+}
+
+/*--------------------------------product-------------------*/
+.admin-content-right-product_add h1{
+    margin-bottom: 12px;
+}
+.admin-content-right-product_add input,select{
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 10px 0 12px;
+    padding-left: 12px;
+}
+.admin-content-right-product_add textarea{
+    display: block;
+    height: 200px;
+    width: 500px;
+    margin-bottom: 12px;
+    padding-left: 12px;
+}
+.admin-content-right-product_add button{
+    display: block;
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    background: brown;
+    border: none;
+    color: cornsilk;
+    transition: all 0.3s ease;
+}
+.admin-content-right-product_add button:hover{
+    background-color: transparent;
+    border: 1px solid brown;
+    color: brown;
+}
